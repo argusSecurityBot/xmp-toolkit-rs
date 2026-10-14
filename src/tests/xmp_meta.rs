@@ -3064,9 +3064,12 @@ mod localized_text {
             .localized_text(xmp_ns::DC, "title", Some("en-us"), "en-uk")
             .unwrap();
 
-        assert_eq!(value.value.trim(), "XMP - Extensible Metadata Platform");
+        assert_eq!(
+            value.value.trim(),
+            "XMP - Extensible Metadata Platform (US English)"
+        );
         assert_eq!(value.options, xmp_prop::HAS_LANG | xmp_prop::HAS_QUALIFIERS);
-        assert_eq!(actual_lang, "x-default");
+        assert_eq!(actual_lang, "en-US");
 
         let (value, actual_lang) = m
             .localized_text(xmp_ns::DC, "title", Some("fr"), "fr")

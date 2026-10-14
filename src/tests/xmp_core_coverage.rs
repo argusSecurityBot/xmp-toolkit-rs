@@ -943,7 +943,7 @@ fn xmp_core_coverage() {
                     value: "en-us value".to_owned(),
                     options: xmp_prop::HAS_LANG | xmp_prop::HAS_QUALIFIERS,
                 },
-                "x-default".to_owned()
+                "en-US".to_owned()
             ))
         );
 

@@ -1521,7 +1521,7 @@ impl XmpMeta {
                     &mut err,
                     c_ns.as_ptr(),
                     c_name.as_ptr(),
-                    match c_generic_lang {
+                    match &c_generic_lang {
                         Some(p) => p.as_ptr(),
                         None => std::ptr::null(),
                     },
